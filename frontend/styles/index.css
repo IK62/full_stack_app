@@ -1,3 +1,7 @@
+@font-face {
+    font-family: RubikMono;
+    src: url(../fonts/RubikMonoOne-Regular.ttf);
+}
 header, footer{
     display: flex;
     justify-content: center;
@@ -6,31 +10,32 @@ header{
     margin-bottom: 40px;
     margin-top: 40px;
 }
-.Signup{
-    margin-left: 60px;
+.Home{
+    margin-left: 20px;
 }
 .Login{
-    margin-right: 60px;
+    margin-right: 20px;
 }
 .LogOut{
     justify-self: center;
 }
-nav{
-    box-shadow: 0px 0px 10px rgb(155, 123, 123);
-    background-color:rgb(193, 193, 223);
+nav, .loginForm, .submit{
+    box-shadow: 0px 0px 20px rgb(172, 171, 171);
+    height: 65px;
+    background:radial-gradient(rgb(192, 192, 192)30%,rgb(223, 223, 223)100%);
     border-radius: 30px;
     display: flex;
     align-self: center;
 }
 .nav-top{
-    width: 30%;
+    width: 45%;
     justify-content: space-between;
 }
 .nav-bottom{
     position: fixed;
     bottom: 0;
     margin-bottom: 40px;
-    width: 10%;
+    width: 12%;
     justify-content: center;
 }
 button{
@@ -39,19 +44,50 @@ button{
     border: none;
     position: relative;
 }
-a:link{
-    text-decoration: none;
-    color:darkblue;
+a{
+    margin-top: 10px;
 }
-a:visited{
+a:link, a:visited, a:hover, a:active, a, label, .submit{
+    font-family: RubikMono, bold;
     text-decoration: none;
-    color:darkblue;
+    font-size: 35px;
+    color:rgb(24, 24, 104);
 }
-a:hover{
-    text-decoration: none;
-    color:darkblue;
+.loginForm{
+    margin-top: 30px;
+    height: auto;
+    background-color: darkgray;
+    border-radius: 20px;
+    padding: 0px 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
-a:active{
-    text-decoration: none;
-    color:darkblue;
+input, input:focus {
+    outline: none;
+    padding: 5px 5px 5px 5px;
+    width: 200px;
+    height: 20px;
+    border: 1px black;
+    border-radius: 5px;
+}
+.submit, .submit:focus{
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 5px 5px 5px 5px;
+    width: 210px;
+    height: 30px;
+    align-self: flex-start;
+    justify-content: center;
+    font-size: 20px;
+    background: rgb(231, 231, 231);
+}
+.recenter{
+    display: flex;
+    justify-content: center;
+}
+label{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
