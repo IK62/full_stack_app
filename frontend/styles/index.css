@@ -65,6 +65,7 @@ a:link, a:visited, a:hover, a:active, a, label, .submit{
 }
 input, input:focus {
     outline: none;
+    outline-width: 1px;
     padding: 5px 5px 5px 5px;
     width: 200px;
     height: 20px;
