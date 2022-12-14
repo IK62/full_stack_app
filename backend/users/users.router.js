@@ -8,7 +8,6 @@ const router = express.Router()
 router.route('/profil').get(profil)
 router.route('/users').get(validateLoginPayload, login)
 router.route('/users').post(validateSignupPayload, signup)
-router.route('/users').put()
 router.route('/users').delete(validateLoginPayload, deletor)
 
 module.exports = router
