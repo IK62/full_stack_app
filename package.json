@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./frontend/index.html"
+    "start": "parcel ./frontend/views/index.html"
   },
   "keywords": [],
   "author": "",

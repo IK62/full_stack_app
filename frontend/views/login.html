@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full stack app - Login</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- <li><a href="index.html">Home</a></li> -->
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <form action="">
+            <h3>Login</h3>
+            <p class="sous-h3">It's been a while!</p>
+            <!-- <label for="username">Username <abbr title="Ce champ est obligatoire">*</abbr></label>
+            <input type="username" minlength="1" maxlength="20" required> -->
+            
+            <label for="email">Email <abbr title="Ce champ est obligatoire">*</abbr></label>
+            <input type="email">
+            <span class="error" aria-live="polite"></span>
+
+            <label for="password">Password <abbr title="Ce champ est obligatoire">*</abbr></label>
+            <input type="password">
+            <a href="forgotpassword.html">You forgot your password ?</a>
+            <button>Login</button>
+            <p>Need an account?<a href="signup.html"> Register</a></p>
+        </form>
+    </section>
+
+    <script src="../js/index.js"></script>
+    
+</body>
+</html>
