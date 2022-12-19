@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full stack app</title>
+    <title>Full stack app - profil</title>
     <link rel="stylesheet" href="../styles/index.css">
     <script src="https://kit.fontawesome.com/7df29f0a0e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <body>
     <header>
-        <nav id="navbar">
+        <nav id="navbar" class="nev">
             <ul id="dmc">
                 <!-- <li><a href="index.html">Home</a></li> -->
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Signup</a></li>
+                <li><a href="" class="logout">Logout</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="home-section">
-        <h2>Hi ${Username}</h2>
+    <section class="profil-section">
+        <form action="">
+        <h2>${Username}</h2>
+        <h3>${adresse-email}</h3>
+        <h3>${FirstName}</h3>
+        <h3>SecondName</h3>
+        <button>+</button>
+        </form>
     </section>
 
     <script src="../js/index.js"></script>
