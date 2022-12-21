@@ -33,18 +33,24 @@ html {
 
 button:disabled,
 button:hover:disabled {
-  color: rgb(255, 255, 255);
-  background-color: rgb(218, 218, 218);
+  color: #36393f;
+  background-color: #dadada;
 }
 
 .error {
-  color: red;
+  color: #ffeded;
   margin-top: 20px;
+  font-size: 15px;
+  background: #f73f3f;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 .input-div {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+}
+.input-div input{
+  text-align: center;
 }
 
 .profil-form {
@@ -116,12 +122,6 @@ li a {
   align-items: center;
   height: calc(100vh - 81.3333px);
 }
-.plus {
-  display: flex;
-  justify-self: center;
-  justify-content: center;
-  width: 50px;
-}
 .profil-section h3,
 button {
   color: #fff;
@@ -157,6 +157,7 @@ form {
   border-radius: 6px;
   width: 400px;
   animation: bounceIn;
+  margin: 50px;
   animation-duration: 1s;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 7px;
 }
@@ -197,7 +198,6 @@ form label {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 81.3333px);
   padding: 0 10px;
 }
 
