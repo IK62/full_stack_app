@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/index.css" />
-    <title>full_stack_app</title>
+    <title>Full stack app - Login</title>
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
-
 <body>
     <header>
-        <nav class="nav-top">
-            <button type="button">
-                <a href="./index.html" class="Home">Home</a>
-            </button>
-            <a>|</a>
-            <button type="button">
-                <a href="./profil.html" class="Profil">Profil</a>
-            </button>
-            <a>|</a>
-            <button type="button">
-                <a href="./signup.html" class="Signup">Signup</a>
-            </button>
-            <a>|</a>
-            <button type="button">
-                <a href="./login.html" class="Login">Login</a>
-            </button>
+        <nav>
+            <ul>
+                <li id="index"><a href="index.html">Home</a></li>
+                <li id="signup"><a href="signup.html">Signup</a></li>
+                <li id="login"><a href="login.html">Login</a></li>
+            </ul>
         </nav>
     </header>
-    <div class="recenter">
-        <form class="loginForm">
-            <label>username</label>
-                <input/>
-            <label>password</label>
-                <input/>
-            <input type="submit" class="submit" value="Submit"/>
-        </form>
-    </div>
-    <footer>
-        <nav class="nav-bottom">
-            <button type="button">
-                <a href="#" class="LogOut">Logout</a>
-            </button>
-        </nav>
-    </footer>
-</body>
 
+    <section class="login-section">
+        <form action="">
+            <h3>Login</h3>
+            <p class="sous-h3">It's been a while!</p>
+            <!-- input -->
+            <label id="username">username</label>
+                <input type="username" name="username">
+            <label id="password">Password</label>
+                <input type="password" name="password">
+            <!-- redirect to forgotpassword -->
+            <a href="forgotpassword.html">You forgot your password ?</a>
+            <button id="submit" disabled>Login</button>
+            <!-- redirect to signup -->
+            <p>Need an account?<a href="signup.html"> Register</a></p>
+        </form>
+    </section>
+
+    <script src="../js/login.js" type="module"></script>
+    <script src="../js/ifLogged.js" type="module"></script>
+    
+</body>
 </html>
