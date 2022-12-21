@@ -6,20 +6,20 @@ let isValid = true
 const body = {}
 
 /* find if form is filled or not */
-function toggleSubmit(){
+function toggleSubmit() {
   inputs.forEach((e) => {
-    if(isValid === true){
-      if(e.value !== ""){
+    if (isValid === true) {
+      if (e.value !== "") {
         isValid = true
-      }else{
+      } else {
         isValid = false
       }
     }
   })
-  if(isValid !== false){
+  if (isValid !== false) {
     submit.toggleAttribute("disabled", false)
   }
-  if(isValid === false){
+  if (isValid === false) {
     submit.toggleAttribute("disabled", true)
   }
   isValid = true
@@ -27,7 +27,7 @@ function toggleSubmit(){
 
 /* listen to change on input to launch toggleSubmit */
 inputs.forEach((e) => {
-  e.addEventListener('change', () => {
+  e.addEventListener("change", () => {
     toggleSubmit()
   })
 })
@@ -36,31 +36,39 @@ inputs.forEach((e) => {
 form.addEventListener("submit", async (e) => {
   e.preventDefault()
   findInput(e.target.elements)
-  const error = document.querySelector('.error')
-  const username = document.querySelector('#username')
+  const error = document.querySelector(".error")
+  const username = document.querySelector("#username")
   try {
-    const getUser = await axios
-      .get(`https://splendid-leggings-pig.cyclic.app/api/users/`, {headers: {username: body.username, password: body.password}})
+    const getUser = await axios.get(
+      `https://splendid-leggings-pig.cyclic.app/api/users/`,
+      { headers: { username: body.username, password: body.password } }
+    )
     console.log(getUser)
-    const {data, data: {token}} = getUser
+    const {
+      data,
+      data: { token },
+    } = getUser
     localStorage.setItem("userToken", token)
     userError(data, error, username)
-    if(data.status === "200"){
-      window.location.pathname = '/index.html'
+    if (data.status === "200") {
+      window.location.pathname = "/index.html"
     }
   } catch (err) {
-    if (err.response.data.msg && err.response.data.msg === 'Authentification failed'){
-      userError('Invalid username', error, username)
+    if (
+      err.response.data.msg &&
+      err.response.data.msg === "Authentification failed"
+    ) {
+      userError("Invalid username", error, username)
     }
-      console.log(
-        ` ${err.response.data.msg}\n`,
-        `status code: ${err.response.status}`
-      )
+    console.log(
+      ` ${err.response.data.msg}\n`,
+      `status code: ${err.response.status}`
+    )
   }
 })
 
-function userError(data, error, child){
-  if(error != null){
+function userError(data, error, child) {
+  if (error != null) {
     error.remove()
   }
   const userError = document.createElement("h3")
